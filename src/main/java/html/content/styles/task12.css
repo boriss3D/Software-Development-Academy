@@ -1,0 +1,40 @@
+h3, label, input {
+    font-family: "Arial", serif
+}
+
+div {
+    width: 700px;
+}
+
+form, input, input[type="submit"], select {
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+
+form {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding: 10px 0;
+}
+
+input {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c9c9c9;
+}
+
+input[type="submit"]{
+    margin-top: 10px;
+    color: white;
+    background-color: #2aad2a;
+}
+
+select {
+    -webkit-appearance:none;
+    width:100%;
+    border: 1px solid #c9c9c9;
+}

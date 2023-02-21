@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms 1</title>
+</head>
+<body>
+<h1>Contact form</h1>
+<form method="post" action="#">
+    <p>
+        <label for="name">Name: </label><input type="text" name="name" id="name" required>
+        <label for="surname">Surname: </label><input type="text" name="surname" id="surname" required>
+    </p>
+    <p>
+        <label for="date">Birth Date: </label><input type="date" name="date" id="date">
+    </p>
+    <p>
+        <label>Sex:
+            <input type="radio" name="sex" value="male"/>Male
+            <input type="radio" name="sex" value="female"/>Female
+        </label>
+    </p>
+    <p>
+        <label>
+            <textarea cols="80" rows="10" name="comments" placeholder="Enter your comments here"></textarea>
+        </label>
+    </p>
+    <p>
+        <button type="submit">Send the application</button>
+    </p>
+</form>
+</body>
+</html>

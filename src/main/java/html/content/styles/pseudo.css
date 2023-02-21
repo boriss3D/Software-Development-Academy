@@ -1,0 +1,29 @@
+/*hover*/
+h2:hover {
+    background-color: aqua;
+}
+/*different nested tags*/
+thead:first-child {
+    color: cornflowerblue;
+}
+
+tbody:last-child {
+    color: darkgoldenrod;
+}
+
+a:link {
+    color: blueviolet;
+    font-family: "American Typewriter", serif;
+    font-weight: bold;
+}
+
+a:visited {
+    color: #777777;
+}
+
+/*Mobile phone*/
+@media screen and (max-width: 480px) {
+    h2 {
+        color: forestgreen;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page template</title>
+  <style>
+    :root {
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      padding: 10px;
+      background-color: white;
+    }
+
+    .header {
+      padding: 10px;
+      text-align: center;
+      background-color: lightgray;
+    }
+
+    .header h1 {
+      font-size: 4rem;
+    }
+
+    .header h2 {
+      font-size: 2rem;
+      font-weight: normal;
+      font-style: italic;
+      letter-spacing: 0.25rem;
+    }
+
+    .main-menu {
+      overflow: hidden;
+      background-color: gray;
+    }
+
+    .main-menu a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 5px 15px;
+      text-decoration: none;
+    }
+
+    .main-menu a:hover {
+      background-color: lightgray;
+      color: black;
+    }
+
+    .content {
+      margin: 5px 10px;
+      overflow: auto;
+    }
+
+    .content .content-left {
+      float: left;
+      width: 20%;
+      background-color: lightgray;
+      padding: 10px;
+    }
+
+    .content .content-main {
+      float: left;
+      width: 60%;
+      background-color: lightgray;
+      padding: 10px;
+      border-left: 1px solid gray;
+      border-right: 1px solid gray;
+    }
+
+    .content .content-right {
+      float: left;
+      width: 20%;
+      background-color: lightgray;
+      padding: 10px;
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: gray;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <h1>My project</h1>
+  <h2>My hyper-super project about CSS!</h2>
+</div>
+<div class="main-menu">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+<div class="content">
+  <div class="content-left">
+    <p>Menu</p>
+  </div>
+  <div class="content-main">
+    <p>Main content</p>
+  </div>
+  <div class="content-right">
+    <p>Some extras</p>
+  </div>
+</div>
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscription Form</title>
+    <style>
+        tr > * {
+            border-style: solid;
+            border-width: 2px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>Subscription Form</h2>
+<h3>I would like to subscribe to</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Publication</th>
+        <th>Term</th>
+        <th>Price</th>
+        <th>Start Date</th>
+        <th>Remark</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="height:16px">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr style="height:16px">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr style="height:16px">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<form>
+    <label for="mr">Mr.</label><input type="radio" id="mr" name="title"/>
+    <label for="mrs"> Mrs.</label><input type="radio" id="mrs" name="title"/>
+    <label for="miss"> Miss</label><input type="radio" id="miss" name="title"/>
+    <br/><br/>
+    <label for="name">Name: </label><input name="name" id="name" type="text">
+    <label for="last">Last Name: </label><input name="last" id="last" type="text">
+    <h3>Delivery address:</h3>
+    <label for="home">Home</label><input type="radio" id="home" name="location"/>
+    <label for="office">Office</label><input type="radio" id="office" name="location"/>
+    <br/>
+    <br/>
+    <label for="company">Company Name: </label><input name="company" id="company" type="text">
+    <br/>
+    <label for="house-number">House number: </label><input name="house-number" id="house-number" type="number">
+    <label for="building">Building: </label><input name="building" id="building" type="number">
+    <label for="floor">Floor: </label><input name="floor" id="floor" type="number">
+    <br/>
+    <label for="room">Room: </label><input name="room" id="room" type="number">
+    <label for="village">Village: </label><input name="village" id="village" type="text">
+    <label for="sol">Sol: </label><input name="sol" id="sol" type="text">
+    <br/>
+    <label for="street">Street:</label><input name="street" id="street" type="text">
+    <label for="sub-district"></label>Sub-district: <input name="sub-district" id="sub-district" type="text">
+    <br/>
+    <label for="district">District: </label><input name="district" id="district" type="text">
+    <label for="city">City: </label><input name="city" id="city" type="text">
+    <br/>
+    <label for="zip">Zip-code: </label><input name="zip" id="zip" type="text">
+    <label for="tel">Tel: </label><input name="tel" id="tel" type="text">
+    <label for="mobile">Mobile Phone: </label><input name="mobile" id="mobile" type="text">
+    <br/>
+    <label for="fax-number">Fax: </label><input name="fax-number" id="fax-number" type="text">
+    <label for="email">Email: </label><input name="email" id="email" type="text">
+    <br/>
+    <br/>
+    <h3>Billing Address: (if different from above)</h3>
+    <label for="company-name">Company name: </label><input name="company-name" id="company-name" type="text">
+    <br/>
+    <label for="address">Address: </label><br/><textarea id="address" name="address" rows="5" cols="20"></textarea>
+    <br/>
+    <label for="company-telephone">Tel:</label><input name="company-telephone" id="company-telephone" type="text">
+    <label for="fax">Fax:</label><input name="fax" id="fax" type="text">
+    <br/>
+    <label for="contact-person">Contact person:</label><input name="contact-person" id="contact-person" type="text">
+    <p>I would like to pay by:</p>
+    <input type="checkbox" id="bank" name="bank"/><label for="bank"> Bank transfer direct to "Bangkok Post Public Co.,
+    Ltd.</label>
+    <table>
+        <tbody>
+        <tr>
+            <td>Bangkok Bank/Sun-thorn Kosa branch</td>
+            <td>A/C 218-3-00884-2</td>
+            <td><label for="date">Date:</label><input name="date" id="date" type="date"></td>
+        </tr>
+        <tr>
+            <td>Kaskikorn Bank/North Sun-thorn branch</td>
+            <td>A/C 244-3-00878-6</td>
+            <td><label for="second-date">Date:</label><input name="second-date" id="second-date" type="date"></td>
+        </tr>
+    </table>
+
+    <label for="credit-card-checkbox"><input type="checkbox" id="credit-card-checkbox">Credit Card</label>
+    <input type="radio" id="visa" name="credit-card-option">
+    <label for="visa"><img src="https://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png"
+                           height="64" alt="visa"></label>
+    <input type="radio" id="mastercard" name="credit-card-option">
+    <label for="mastercard"><img src="https://pngimg.com/d/mastercard_PNG4.png" height="64" alt="mastercard"></label>
+    <input type="radio" id="american-express" name="credit-card-option">
+    <label for="american-express"><img
+            src="https://cdn.iconscout.com/icon/free/png-256/payment-american-express-card-bank-transaction-51314.png"
+            height="64" alt="american-express"></label>
+    <br/>
+    <label for="credit-card-number">CreditCard number:</label><input name="credit-card number" id="credit-card-number"
+                                                                     type="text">
+</form>
+</body>
+</html>

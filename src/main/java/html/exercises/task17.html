@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const a = 5;
+    const b = 10;
+
+    // basic mathematical operations and display the results of these operations on the console
+    console.log(a + b);
+    console.log(a - b);
+    console.log(a * b);
+    console.log(a / b);
+
+    // use the if else conditional statement to display information on the console about the number that is bigger
+    // and the one that is smaller
+    if (a > b) {
+        console.log(a + " is bigger than " + b)
+    } else {
+        console.log(b + " is bigger than " + a)
+    }
+
+    // use a for loop to calculate the sum of all numbers from lower to higher (inclusive) and display the obtained sum
+    // on the console
+    let sum = 0;
+    for (let i = a; i <= b; i++) {
+        sum += i;
+    }
+    console.log(sum);
+
+    // write the function showSum, which will take two numbers and based on the previous algorithm will display
+    // the obtained sum in a dialog window (alert)
+    function showSum(a, b) {
+        let sum = 0;
+        for (let i = a; i <= b; i++) {
+            sum += i;
+        }
+        alert(sum);
+    }
+
+    showSum(a, b);
+
+    // call the function showSum on a set of 3 different pairs of values.
+    showSum(-1, 20);
+    showSum(4, 7);
+    showSum(100, 200);
+
+</script>
+</body>
+</html>

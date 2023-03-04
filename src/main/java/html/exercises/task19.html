@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with validation</title>
+    <style>
+        .errorMsg {
+            color: red;
+            font-weight: bold;
+            visibility: hidden;
+        }
+
+        #form-result {
+            visibility: hidden;
+        }
+
+        .errorMsg {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<h1>Form with validation</h1>
+<form action="#">
+    <p>
+        <label for="username">Username: </label><input type="text" id="username" name="username"/>
+        <span class="errorMsg"></span>
+    </p>
+    <p>
+        <label for="password">Password: </label><input type="password" id="password" name="password"/>
+        <span class="errorMsg"></span>
+    </p>
+    <p>
+        <label for="email">Email: </label><input type="text" id="email" name="email"/>
+        <span class="errorMsg"></span>
+    </p>
+    <p>
+        <label for="age">Age: </label><input type="number" id="age" name="age"/>
+        <span class="errorMsg"></span>
+    </p>
+    <p>
+        <label for="activationDate">System activation date: </label><input type="date" id="activationDate"
+                                                                           name="activationDate"/>
+        <span class="errorMsg"></span>
+    </p>
+    <p>
+        <button type="button" onclick="validateForm()">Submit</button>
+    </p>
+    <p id="form-result"></p>
+</form>
+<script>
+    function validateForm() {
+
+        let validForm = true;
+
+        const formResult = document.getElementById("form-result");
+
+        const errorMessage = document.querySelectorAll("form p span");
+        errorMessage.forEach(function (errorMsg) {
+            errorMsg.innerText = "";
+        });
+
+        let valid = validateUsername();
+        if (!valid) {
+            const usernameError = document.querySelector("#username + span")
+            usernameError.style = "visibility: visible";
+            usernameError.innerText = "Invalid Username";
+            validForm = false;
+        }
+
+        valid = validatePassword();
+        if (!valid) {
+            const passwordError = document.querySelector("#password + span")
+            passwordError.style = "visibility: visible";
+            passwordError.innerText = "Invalid Password";
+            validForm = false;
+        }
+
+        valid = validateEmail();
+        if (!valid) {
+            const emailError = document.querySelector("#email + span")
+            emailError.style = "visibility: visible";
+            emailError.innerText = "Invalid Email";
+            validForm = false;
+        }
+
+        valid = validateAge();
+        if (!valid) {
+            const ageError = document.querySelector("#age + span")
+            ageError.style = "visibility: visible";
+            ageError.innerText = "Invalid Age";
+            validForm = false;
+        }
+
+        valid = validateDate();
+        if (!valid) {
+            const dateError = document.querySelector("#activationDate + span")
+            dateError.style = "visibility: visible";
+            dateError.innerText = "Invalid Date";
+            validForm = false;
+        }
+
+        document.getElementById("form-result").style.display = "block";
+        document.getElementById("form-result").style.visibility = "visible";
+        if (validForm) {
+            formResult.innerText = "Form filled correctly!";
+        } else {
+            formResult.innerText = "Fix all problems!";
+        }
+    }
+
+    function validateUsername() {
+        const username = document.getElementById("username")["value"];
+        if (username == null || username.length < 3) return false;
+        const pattern = new RegExp("^[-_.a-z]+$");
+        return pattern.test(username);
+    }
+
+    function validatePassword() {
+        const password = document.getElementById("password")["value"];
+        if (password == null || password.length < 3 || password.length > 12) {
+            return false
+        }
+        const pattern = new RegExp("[!@#$%]+");
+        return pattern.test(password);
+    }
+
+    function validateEmail() {
+        const email = document.getElementById("email")["value"];
+        if (email == null) return false;
+        const pattern = new RegExp("^.+@[^.].*\\.[a-z]{2,}$");
+        return pattern.test(email);
+    }
+
+    function validateAge() {
+        const age = document.getElementById("age")["value"];
+        if (age == null) return false;
+        return age > 0 && age <= 122;
+    }
+
+    function validateDate() {
+        const activationDateText = document.getElementById("activationDate")["value"];
+        if (activationDateText == null) return false;
+        if (activationDateText === "") return false;
+        const activationDate = new Date(activationDateText);
+        const now = new Date();
+        now.setHours(0,0,0,0);
+        if (activationDate.getTime() < now.getTime()) return false;
+        const sevenDaysFromNow = new Date(now.getTime() + 1000 * 60 * 60 * 24 * 7);
+        activationDate.setHours(0,0,0,0);
+        return activationDate.getTime() <= sevenDaysFromNow.getTime();
+    }
+</script>
+</body>
+</html>

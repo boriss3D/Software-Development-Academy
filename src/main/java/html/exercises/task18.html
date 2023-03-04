@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage elements</title>
+</head>
+<body>
+<h1 id="header">Dynamic header</h1>
+<div id="controls">
+    <!-- attach the show function to the id="show" button so that the header text changes when pressed -->
+    <button id="show" onclick="show('example')">Change to a sample text</button>
+    <br/>
+    <button id="show-input" onclick="newShow()">Change to a text from an element</button>
+    <label for="id-input"></label><input type="text" id="id-input" placeholder="Enter element id here"/>
+</div>
+<div id="test">
+    <p id="example">Sample text to be loaded</p>
+    <p id="example2">Lorem ipsum bla bla bla</p>
+    <p id="example3">Tests teach!</p>
+    <p id="example4"></p>
+    <p id="example5" style="display: none">Hidden text which can be also displayed!</p>
+</div>
+<script>
+    function show(identifier) {
+        // We find elements with id header example
+        const header = document.getElementById("header");
+        const example = document.getElementById(identifier);
+
+        // We set the text from inside the header element to the value
+        // of the text in example
+        header.innerText = example.innerText;
+    }
+
+    // Create a new function and combine it with pressing the show-input button - the new function should load
+    // the id value entered field with "id-input" and use this value to call the show function.
+    function newShow() {
+        const elementId = document.getElementById("id-input")["value"];
+        show(elementId);
+    }
+</script>
+</body>
+</html>
